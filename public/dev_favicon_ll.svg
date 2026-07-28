@@ -1,0 +1,64 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон с градиентом -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Градиент для красной шестеренки -->
+    <radialGradient id="redGear">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc143c;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Градиент для желтой шестеренки -->
+    <radialGradient id="yellowGear">
+      <stop offset="0%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="64" height="64" fill="url(#bgGrad)" rx="10"/>
+  
+  <!-- Красная шестеренка (большая, слева-внизу) -->
+  <g transform="translate(22, 38)">
+    <!-- Зубья шестеренки -->
+    <circle cx="0" cy="-18" r="3.5" fill="url(#redGear)"/>
+    <circle cx="12.7" cy="-12.7" r="3.5" fill="url(#redGear)"/>
+    <circle cx="18" cy="0" r="3.5" fill="url(#redGear)"/>
+    <circle cx="12.7" cy="12.7" r="3.5" fill="url(#redGear)"/>
+    <circle cx="0" cy="18" r="3.5" fill="url(#redGear)"/>
+    <circle cx="-12.7" cy="12.7" r="3.5" fill="url(#redGear)"/>
+    <circle cx="-18" cy="0" r="3.5" fill="url(#redGear)"/>
+    <circle cx="-12.7" cy="-12.7" r="3.5" fill="url(#redGear)"/>
+    
+    <!-- Основной круг -->
+    <circle cx="0" cy="0" r="14" fill="url(#redGear)" stroke="#aa0000" stroke-width="1"/>
+    <circle cx="0" cy="0" r="6" fill="#1a1a1a"/>
+    <circle cx="0" cy="0" r="3" fill="url(#redGear)"/>
+  </g>
+  
+  <!-- Желтая шестеренка (меньше, справа-вверху) -->
+  <g transform="translate(44, 24)">
+    <!-- Зубья шестеренки -->
+    <circle cx="0" cy="-14" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="9.9" cy="-9.9" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="14" cy="0" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="9.9" cy="9.9" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="0" cy="14" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="-9.9" cy="9.9" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="-14" cy="0" r="2.8" fill="url(#yellowGear)"/>
+    <circle cx="-9.9" cy="-9.9" r="2.8" fill="url(#yellowGear)"/>
+    
+    <!-- Основной круг -->
+    <circle cx="0" cy="0" r="11" fill="url(#yellowGear)" stroke="#ccaa00" stroke-width="1"/>
+    <circle cx="0" cy="0" r="5" fill="#1a1a1a"/>
+    <circle cx="0" cy="0" r="2.5" fill="url(#yellowGear)"/>
+  </g>
+  
+  <!-- Декоративные элементы - искры/точки -->
+  <circle cx="12" cy="15" r="1.5" fill="#ffd700" opacity="0.8"/>
+  <circle cx="52" cy="48" r="1.2" fill="#dc143c" opacity="0.7"/>
+  <circle cx="18" cy="52" r="1" fill="#ffd700" opacity="0.6"/>
+</svg>
