@@ -11,8 +11,19 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+
   plugins: [
     react(),
     tailwindcss(),
   ],
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/app/styles" as s;
+        `,
+      },
+    },
+  },
 })
