@@ -1,9 +1,11 @@
 import { NavLink, Outlet } from 'react-router'
 
+import styles from './AppLayout.module.scss'
+
 export function AppLayout() {
   return (
     <>
-      <header>
+      <header className={styles['app-header']}>
         <nav aria-label='Main navigation'>
           <NavLink to='/' end>
             Home
@@ -15,9 +17,13 @@ export function AppLayout() {
         </nav>
       </header>
 
-      <main>
+      <main className={styles['app-main']}>
         <Outlet />
       </main>
+
+      <footer className={styles['app-footer']}>
+        Footer
+      </footer>
     </>
   )
 }

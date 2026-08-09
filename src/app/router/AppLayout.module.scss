@@ -1,0 +1,19 @@
+:global(#root) {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+}
+
+.app-main {
+  min-height: 0;
+}
+
+.app-footer {
+  align-self: end;
+}

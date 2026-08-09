@@ -102,7 +102,7 @@ export default defineConfig([
       'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
       'no-prototype-builtins': 'off',
       'no-unused-vars': 'off',
-      'prefer-const': 'off',
+      'prefer-const': 'warn',
       'jsx-quotes': ['error', 'prefer-single'],
       'quotes': ['error', 'single', { avoidEscape: true }],
       'semi': ['error', 'never'],
