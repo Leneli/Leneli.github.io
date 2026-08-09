@@ -1,12 +1,11 @@
 import type { FC } from 'react'
 
-import { Logo } from '@/widgets/Logo'
+import { Logo } from '@/shared/ui'
 
 export const Header: FC = () => {
   return (
     <div>
-      <Logo width={124} height={124} />
-      <span>LOGO</span>
+      <Logo />
 
       <span>About</span>
       <span>Skills</span>

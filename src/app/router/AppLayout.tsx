@@ -1,4 +1,6 @@
-import { NavLink, Outlet } from 'react-router'
+import { Link, NavLink, Outlet } from 'react-router'
+
+import { Logo } from '@/shared/ui'
 
 import styles from './AppLayout.module.scss'
 
@@ -7,7 +9,15 @@ export function AppLayout() {
     <div className={styles['app-layout']}>
       <header className={styles['app-header']}>
         <div className={styles['app-header-content']}>
-          <nav aria-label='Main navigation'>
+          <Link
+            className={styles['brand-link']}
+            to='/'
+            aria-label='Leneli — home'
+          >
+            <Logo />
+          </Link>
+
+          <nav className={styles['app-navigation']} aria-label='Main navigation'>
             <NavLink to='/' end>
               Home
             </NavLink>

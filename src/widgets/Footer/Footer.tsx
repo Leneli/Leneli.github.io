@@ -1,11 +1,11 @@
 import type { FC } from 'react'
 
-import { Logo } from '@/widgets/Logo'
+import { Logo } from '@/shared/ui'
 
 export const Footer: FC = () => {
   return (
     <div>
-      <Logo width={100} height={100} />
+      <Logo compact />
       <p>FOOTER!!!</p>
     </div>
   )
