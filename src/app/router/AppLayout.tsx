@@ -4,17 +4,19 @@ import styles from './AppLayout.module.scss'
 
 export function AppLayout() {
   return (
-    <>
+    <div className={styles['app-layout']}>
       <header className={styles['app-header']}>
-        <nav aria-label='Main navigation'>
-          <NavLink to='/' end>
-            Home
-          </NavLink>
+        <div className={styles['app-header-content']}>
+          <nav aria-label='Main navigation'>
+            <NavLink to='/' end>
+              Home
+            </NavLink>
 
-          <NavLink to='/dev'>
-            Dev
-          </NavLink>
-        </nav>
+            <NavLink to='/dev'>
+              Dev
+            </NavLink>
+          </nav>
+        </div>
       </header>
 
       <main className={styles['app-main']}>
@@ -22,8 +24,10 @@ export function AppLayout() {
       </main>
 
       <footer className={styles['app-footer']}>
-        Footer
+        <div className={styles['app-footer-content']}>
+          Footer
+        </div>
       </footer>
-    </>
+    </div>
   )
 }

@@ -1,19 +1,80 @@
-:global(#root) {
+.app-layout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   min-height: 100dvh;
+  color: var(--ll-color-text-primary, #172126);
+  background: var(--ll-color-canvas, #f5f7f8);
 }
 
 .app-header {
   position: sticky;
+  z-index: 100;
   top: 0;
+  border-bottom: var(--ll-border-thin, 1px) solid color-mix(
+    in srgb,
+    var(--ll-color-border-default, #d8e0e4) 78%,
+    transparent
+  );
+  background: color-mix(
+    in srgb,
+    var(--ll-color-surface-default, #fff) 88%,
+    transparent
+  );
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+.app-header-content,
+.app-footer-content {
+  width: min(100%, var(--ll-layout-content-max-width, 72rem));
+  margin-inline: auto;
+  padding-inline: var(--ll-layout-page-padding-inline, clamp(1rem, 4vw, 2.5rem));
+}
+
+.app-header-content {
+  padding-block: 0.7rem;
+}
+
+.app-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.app-header a {
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--ll-radius-full, 9999px);
+  color: var(--ll-color-text-secondary, #55636a);
+  font-size: var(--ll-typography-size-sm, 0.875rem);
+  font-weight: var(--ll-typography-weight-semibold, 600);
+  text-decoration: none;
+  transition:
+    color var(--ll-motion-duration-fast, 140ms) var(--ll-motion-easing-standard, ease),
+    background var(--ll-motion-duration-fast, 140ms) var(--ll-motion-easing-standard, ease);
+}
+
+.app-header a:hover {
+  color: var(--ll-color-brand-default, #17647a);
+  background: var(--ll-color-surface-muted, #edf1f3);
+}
+
+.app-header a[aria-current='page'] {
+  color: var(--ll-color-brand-contrast, #fff);
+  background: var(--ll-color-brand-default, #17647a);
 }
 
 .app-main {
-  min-height: 0;
+  min-width: 0;
 }
 
 .app-footer {
-  align-self: end;
+  border-top: var(--ll-border-thin, 1px) solid var(--ll-color-border-default, #d8e0e4);
+  color: var(--ll-color-text-secondary, #55636a);
+  background: var(--ll-color-surface-default, #fff);
+}
+
+.app-footer-content {
+  padding-block: clamp(1.25rem, 3vw, 2rem);
+  font-size: var(--ll-typography-size-sm, 0.875rem);
 }
