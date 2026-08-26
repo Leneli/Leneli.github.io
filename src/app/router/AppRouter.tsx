@@ -18,7 +18,7 @@ export function AppRouter() {
 
         {/* For Development */}
         <RouteTyped path={ROUTE_PATHS.DEV} element={<DevPage />} />
-        <Route path='theme' element={<ThemePage />} />
+        <RouteTyped path={ROUTE_PATHS.DEV_THEME} element={<ThemePage />} />
 
         <Route path='*' element={<NotFoundPage />} />
       </Route>
