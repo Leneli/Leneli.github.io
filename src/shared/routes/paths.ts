@@ -1,5 +1,9 @@
 export const ROUTE_PATHS = {
   HOME: '/',
+  PROJECTS: '/projects',
+  EXPERIENCE: '/experience',
+  ABOUT: '/about',
+  CONTACT: '/contact',
   DEV: '/dev',
   DEV_THEME: '/dev/theme',
 } as const
